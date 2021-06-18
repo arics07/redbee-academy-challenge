@@ -11,7 +11,14 @@ public class SumTwoNumbers {
    * @return The result of a + b
    */
   public static Integer sum(Integer a, Integer b) {
-    //TODO: Implement me
-    return null;
+    Integer result = 0;
+    try {
+      result = Integer.sum(a,b);
+    } catch (NullPointerException e) {
+      if (a==null) a = 0;
+      else b = 0;
+      result = Integer.sum(a,b);
+    }
+    return result;
   }
 }
